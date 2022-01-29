@@ -24,6 +24,5 @@ public class Equals_HashCode {
         System.out.println("=========== 값이 변경된 book_1 =============");
         System.out.println("book_1.hashCode : " + book_1.hashCode());
         // book_1의 값이 변경되어도 hashCode 값은 동일 ==> 결국 같은 객체의 book_1 주소를 리턴하기 때문에
-
     }
 }
