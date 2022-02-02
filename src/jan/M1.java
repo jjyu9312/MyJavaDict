@@ -1,4 +1,4 @@
-package Jan;
+package jan;
 
 public class M1 extends Mac{
 

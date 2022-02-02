@@ -1,4 +1,4 @@
-package Jan;
+package jan;
 
 public class ProDisplay extends Display {
 

@@ -1,4 +1,4 @@
-package Jan;
+package jan;
 
 public class Equals_HashCode {
     public static void main(String[] args) {
