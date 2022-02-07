@@ -2,20 +2,20 @@ package fab;
 
 public class SingleThread_Ex2 implements Runnable{
 
-    private int[] temp;
+    private int[] intArray;
 
     public SingleThread_Ex2(){
-        temp = new int[10];
+        intArray = new int[10];
 
-        for(int start=0;start<temp.length;start++){
-            temp[start]=start;
+        for(int start = 0; start < intArray.length;start++){
+            intArray[start] = start;
         }
     }
 
     @Override
     public void run() {
-        // TODO Auto-generated method stub
-        for(int start:temp){
+
+        for(int start : intArray){
             try {
                 Thread.sleep(1000);
 
@@ -24,8 +24,8 @@ public class SingleThread_Ex2 implements Runnable{
                 // TODO: handle exception
             }
 
-            System.out.println("스레드이름:"+Thread.currentThread().getName());
-            System.out.println("temp value :"+start);
+            System.out.println("thread Name : "+Thread.currentThread().getName());
+            System.out.println("intArray value : "+start);
         }
     }
 

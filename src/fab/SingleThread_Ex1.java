@@ -2,18 +2,21 @@ package fab;
 
 // Runnable을 implement한 Thread
 public class SingleThread_Ex1 extends Thread{
-    private int[] temp;
-    public SingleThread_Ex1(String threadname){
-        super(threadname);
-        temp = new int[10];
 
-        for(int start=0;start<temp.length;start++){
-            temp[start]=start;
+    private int[] intArray;
+
+    public SingleThread_Ex1(String threadname) {
+        // Thread 클래스를 상속받음.
+        super(threadname);
+        intArray = new int[10];
+
+        for(int start = 0; start < intArray.length;start++){
+            intArray[start] = start;
         }
     }
 
     public void run(){
-        for(int start:temp){
+        for(int start : intArray){
             try {
                 Thread.sleep(1000);
 
@@ -21,8 +24,8 @@ public class SingleThread_Ex1 extends Thread{
                 ie.printStackTrace();
                 // TODO: handle exception
             }
-            System.out.println("스레드이름:"+currentThread().getName());
-            System.out.println("temp value :"+start);
+            System.out.println("thread Name : "+currentThread().getName());
+            System.out.println("intArray value : "+start);
         }
     }
 
