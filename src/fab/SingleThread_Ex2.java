@@ -2,10 +2,10 @@ package fab;
 
 public class SingleThread_Ex2 implements Runnable{
 
-    private int[] intArray;
+    private final int[] intArray;
 
     public SingleThread_Ex2(){
-        intArray = new int[10];
+        intArray = new int[5];
 
         for(int start = 0; start < intArray.length;start++){
             intArray[start] = start;
@@ -32,7 +32,7 @@ public class SingleThread_Ex2 implements Runnable{
     public static void main(String[] args) {
 
         SingleThread_Ex2 ct = new SingleThread_Ex2();
-        Thread t = new Thread(ct,"첫번째");
+        Thread t = new Thread(ct,"SingleThread");
 
         t.start();
     }

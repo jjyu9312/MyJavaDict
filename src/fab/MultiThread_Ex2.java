@@ -1,9 +1,11 @@
 package fab;
 
 class ATM implements Runnable {
-    private long depositeMoney = 10000;
+    private long depositeMoney = 5000;
 
     public void run() {
+
+        /* synchronized 하나가 끝나야 실행됨 */
         synchronized (this) {
 
             for (int i = 0; i < 10; i++) {
@@ -40,9 +42,9 @@ class ATM implements Runnable {
 public class MultiThread_Ex2 {
     public static void main(String[] args) {
         ATM atm = new ATM();
-        Thread mother = new Thread(atm, "Friend");
-        Thread son = new Thread(atm, "Me");
-        mother.start();
-        son.start();
+        Thread friend = new Thread(atm, "Friend");
+        Thread me = new Thread(atm, "Me");
+        friend.start();
+        me.start();
     }
 }

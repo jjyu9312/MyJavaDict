@@ -21,8 +21,7 @@ public class MultiThread_Ex1 implements Runnable{
     @Override
     public void run() {
 
-        /* synchronized 하나가 끝나야 실행됨 */
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 5; i++){
             if(Thread.currentThread().getName().equals("A")){
                 System.out.println("=======================");
                 TestNum++;
